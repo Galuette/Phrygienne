@@ -20,7 +20,7 @@ async def on_message(message):
 	if m.startswith ("?info"):
 		await message.channel.send(wikipedia.summary(m[5:-1]))
 
-	if m.startswith("?iind degré") | m.startswith("?second degré") | m.startswith("?évangile selon saint franck") | m.startswith("évangile selon st franck") | m.startswith(".deuxième degré") :
+	if m.startswith("?iind degré") | m.startswith("?second degré") | m.startswith("?évangile selon saint franck") | m.startswith("?évangile selon st franck") | m.startswith(".deuxième degré") :
 		await message.channel.send("IInd degré chiffré 6 : on double la basse si possible au ténor, et ça descend !")
 
 client.run(token)

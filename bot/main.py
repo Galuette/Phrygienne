@@ -18,9 +18,9 @@ async def on_message(message):
 	m = message.content.lower()
 
 	if m.startswith ("?info"):
-		if suggest(m[5:-1]) != None :
+		if wikipedia.suggest(m[5:-1]) != None :
 			await message.channel.send(wikipedia.summary(wikipedia.suggest(m[5:-1])))
-		elif len(search(m[5:-1])) != 0 :
+		elif len(wikipedia.search(m[5:-1])) != 0 :
 			await message.channel.send(wikipedia.summary(wikipedia.search(m[5:-1])[0]))
 		else :
 			await message.channel.send(wikipedia.summary(m[5:-1]))

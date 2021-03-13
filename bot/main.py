@@ -21,7 +21,7 @@ async def on_message(message):
 		if wikipedia.suggest(m[5:len(m)]) != None :
 			await message.channel.send(wikipedia.summary(wikipedia.suggest(m[5:len(m)])))
 		elif len(wikipedia.search(m[5:len(m)])) != 0 :
-			await message.channel.send(wikipedia.summary(wikipedia.search(m[5:len(m)])[0]))
+			#await message.channel.send(wikipedia.summary(wikipedia.search(m[5:len(m)])[0]))
 			await message.channel.send(wikipedia.summary(wikipedia.summary('Jean-Sébastien Bach'))
 		else :
 			await message.channel.send(wikipedia.summary(m[5:len(m)]))
